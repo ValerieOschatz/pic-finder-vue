@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.footer {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  flex-shrink: 0;
+  padding: 40px 0;
+  border-top: 3px solid rgb(245, 169, 118);
+}
+
+@media screen and (max-width: 1279px) {
+  .footer {
+    width: calc(100% - 30px * 2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    width: calc(100% - 20px * 2);
+  }
+}

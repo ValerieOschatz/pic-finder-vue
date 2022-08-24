@@ -1,0 +1,24 @@
+@import url(../vendor/normalize.scss);
+@import url(../vendor/fonts/opensans.scss);
+@import url(./blocks/page/page.scss);
+
+@import url(./blocks/header/header.scss);
+@import url(./blocks/header/__container/header__container.scss);
+@import url(./blocks/header/__title/header__title.scss);
+
+@import url(./blocks/gallery/gallery.scss);
+@import url(./blocks/gallery/__form/gallery__form.scss);
+@import url(./blocks/gallery/__input/gallery__input.scss);
+@import url(./blocks/gallery/__submit-button/gallery__submit-button.scss);
+@import url(./blocks/gallery/__card-list/gallery__card-list.scss);
+@import url(./blocks/gallery/__image/gallery__image.scss);
+@import url(./blocks/gallery/__button/gallery__button.scss);
+
+@import url(./blocks/footer/footer.scss);
+@import url(./blocks/footer/__text/footer__text.scss);
+
+@import url(./blocks/cardInfo/cardInfo.scss);
+@import url(./blocks/cardInfo/__link/cardInfo__link.scss);
+@import url(./blocks/cardInfo/__figure/cardInfo__figure.scss);
+@import url(./blocks/cardInfo/__image/cardInfo__image.scss);
+@import url(./blocks/cardInfo/__text/cardInfo__text.scss);

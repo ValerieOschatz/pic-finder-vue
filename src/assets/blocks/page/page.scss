@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+
+.page {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  background-color: $main-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
