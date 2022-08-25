@@ -1,0 +1,60 @@
+@import '../variables.scss';
+
+.cardInfo {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  &__figure {
+    margin: 20px auto 0;
+    width: min-content;
+  }
+
+  &__image {
+    max-height: 75vh;
+    max-width: 75vw;
+    display: block;
+    outline: 5px solid #fff;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text-color;
+    transition: color .3s linear;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+  
+    &:hover {
+      color: $button-color;
+    }
+  }
+
+  &__text {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0 0;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .cardInfo {
+    width: calc(100% - 30px * 2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardInfo {
+    width: calc(100% - 20px * 2);
+
+    &__link {
+      font-size: 18px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

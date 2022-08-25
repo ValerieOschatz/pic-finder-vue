@@ -2,3 +2,9 @@ $max-width: 1170px;
 $main-color: cornsilk;
 $text-color: darkslategrey;
 $button-color: cadetblue;
+
+@mixin text-params($margin) {
+  font-size: 18px;
+  line-height: 1.1;
+  margin: $margin;
+}
