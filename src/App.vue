@@ -1,29 +1,23 @@
 <template>
   <div className="page">
-    <Header />
-    <Main
+    <router-view
       :cards="cards"
       :query="query"
+      :selectedCard="selectedCard"
       :onSubmit="handleSubmit"
-      :onChangeQuery="handleChangeQuery" />
-    <Footer />
+      :onChangeQuery="handleChangeQuery"
+      :onScroll="handleScroll"
+      :onCardClick="handleCardClick"
+      :onBack="handleBack">
+    </router-view>
   </div>
 </template>
 
 <script>
-import Header from './Header.vue';
-import Main from './Main.vue';
-import Footer from './Footer.vue';
-import { getPictures } from "../utils/api";
+import { getPictures } from "./utils/api";
 
 export default {
   name: 'App',
-
-  components: {
-    Main,
-    Header,
-    Footer
-  },
 
   data() {
     return {
@@ -70,15 +64,27 @@ export default {
           this.isfetching = false;
         })
       }
-    }
+    },
+
+    handleCardClick(card) {
+      this.selectedCard = card;
+    },
+
+    handleBack() {
+      this.selectedCard = null;
+    },
+
+    goToHomePage() {
+      if (this.selectedCard) {
+        this.$router.push('/card');
+      } else {
+        this.$router.push('/');
+      }
+    },
   },
 
   mounted() {
-    document.addEventListener('scroll', this.handleScroll);
+    this.goToHomePage();
   },
-
-  unmounted() {
-    document.removeEventListener('scroll', this.handleScroll);
-  }
 }
 </script>
