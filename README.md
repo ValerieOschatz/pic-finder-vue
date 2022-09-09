@@ -1,24 +1,25 @@
 # pic-finder-vue
 
-## Project setup
-```
-npm install
-```
+- приложение для поиска и просмотра фотографий, подключенное к API Unsplash.  
+Реализован поиск фотографий по введенному слову, просмотр фотографий с описанием, также просмотр случайного фото.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Стек
 
-### Lints and fixes files
-```
-npm run lint
-```
+* JS
+* HTML
+* CSS
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Технологии
+
+* Vue 3
+* Vue Router
+* SASS
+* API
+* Flexbox
+* Адаптив, респонсив
+* БЭМ Nested
+
+
+### [Ссылка на проект](https://valerieoschatz.github.io/pic-finder-vue/)

@@ -2,6 +2,7 @@
   "name": "pic-finder-vue",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://valerieoschatz.github.io/pic-finder-vue",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -21,6 +22,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "gh-pages": "^4.0.0",
     "node-sass": "^7.0.1",
     "sass": "^1.54.5",
     "sass-loader": "^13.0.2",
