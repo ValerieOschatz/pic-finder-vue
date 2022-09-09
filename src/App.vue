@@ -8,13 +8,14 @@
       :onChangeQuery="handleChangeQuery"
       :onScroll="handleScroll"
       :onCardClick="handleCardClick"
-      :onBack="handleBack">
+      :onBack="handleBack"
+      :onGetRandom="handleGetRandom">
     </router-view>
   </div>
 </template>
 
 <script>
-import { getPictures } from "./utils/api";
+import { getPictures, getRandomPicture } from "./utils/api";
 
 export default {
   name: 'App',
@@ -72,6 +73,17 @@ export default {
 
     handleBack() {
       this.selectedCard = null;
+    },
+
+    handleGetRandom() {
+      getRandomPicture()
+      .then((cardData) => {
+        this.selectedCard = cardData;
+        this.$router.push('/card');
+      })
+      .catch((err) => {
+        console.log(err);
+      })
     },
 
     goToHomePage() {

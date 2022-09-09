@@ -5,7 +5,8 @@
     :query="query"
     :onSubmit="onSubmit"
     :onChangeQuery="onChangeQuery"
-    :onCardClick="onCardClick" />
+    :onCardClick="onCardClick"
+    :onGetRandom="onGetRandom" />
   <Footer />
 </template>
 
@@ -31,7 +32,8 @@ export default {
     onScroll: Function,
     onCardClick: Function,
     selectedCard: Object,
-    onBack: Function
+    onBack: Function,
+    onGetRandom: Function
   },
 
   mounted() {

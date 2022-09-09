@@ -20,7 +20,8 @@ export default {
     onSubmit: Function,
     onChangeQuery: Function,
     onScroll: Function,
-    onCardClick: Function
+    onCardClick: Function,
+    onGetRandom: Function
   }
 }
 </script>

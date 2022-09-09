@@ -4,7 +4,7 @@
       :query="query"
       :onSubmit="onSubmit"
       :onChangeQuery="onChangeQuery" />
-    <button className="gallery__button" type="button">Show random picture</button>
+    <button className="gallery__button" type="button" @click="onGetRandom">Show random picture</button>
     <ul className="gallery__card-list">
       <li className="gallery__card-item" v-for="card in cards" :key="card.id">
         <router-link to="/card">
@@ -26,7 +26,8 @@ export default {
     query: String,
     onSubmit: Function,
     onChangeQuery: Function,
-    onCardClick: Function
+    onCardClick: Function,
+    onGetRandom: Function
   },
   methods: {
     handleClick(card) {
