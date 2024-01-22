@@ -11,7 +11,6 @@
 <script>
 export default {
   name: 'About-page',
-
   props: {
     selectedCard: Object,
     onBack: Function,

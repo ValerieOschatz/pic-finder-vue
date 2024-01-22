@@ -17,13 +17,11 @@ import Footer from '../components/Footer.vue';
 
 export default {
   name: 'Home-page',
-
   components: {
     Main,
     Header,
     Footer
   },
-
   props: {
     cards: Array,
     query: String,
@@ -35,11 +33,9 @@ export default {
     onBack: Function,
     onGetRandom: Function
   },
-
   mounted() {
     document.addEventListener('scroll', this.onScroll);
   },
-
   unmounted() {
     document.removeEventListener('scroll', this.onScroll);
   }

@@ -19,7 +19,6 @@ import { getPictures, getRandomPicture } from "./utils/api";
 
 export default {
   name: 'App',
-
   data() {
     return {
       cards: [],
@@ -30,7 +29,6 @@ export default {
       selectedCard: null
     }
   },
-
   methods: {
     handleSubmit() {
       this.page = 1;
@@ -43,38 +41,37 @@ export default {
         console.log(err);
       })
     },
-
     handleChangeQuery(e) {
       this.query = e.target.value;
     },
-
+    getPictureList() {
+      getPictures(this.page, this.query)
+      .then((cardsData) => {
+        this.cards = [...this.cards, ...cardsData.results];
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        this.isfetching = false;
+      })
+    },
     handleScroll(e) {
       if (e.target.documentElement.scrollTop + e.target.documentElement.clientHeight >= e.target.documentElement.scrollHeight) {
         this.isfetching = true;
         this.page += 1;
       }
+
       if (this.isfetching && this.cards.length < this.totalPages) {
-        getPictures(this.page, this.query)
-        .then((cardsData) => {
-          this.cards = [...this.cards, ...cardsData.results];
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-        .finally(() => {
-          this.isfetching = false;
-        })
+        this.getPictureList();
       }
     },
-
     handleCardClick(card) {
       this.selectedCard = card;
     },
-
     handleBack() {
       this.selectedCard = null;
     },
-
     handleGetRandom() {
       getRandomPicture()
       .then((cardData) => {
@@ -85,7 +82,6 @@ export default {
         console.log(err);
       })
     },
-
     goToHomePage() {
       if (this.selectedCard) {
         this.$router.push('/card');
@@ -94,7 +90,6 @@ export default {
       }
     },
   },
-
   mounted() {
     this.goToHomePage();
   },
